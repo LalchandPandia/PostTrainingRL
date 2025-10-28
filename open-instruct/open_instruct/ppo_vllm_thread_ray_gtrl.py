@@ -1,33 +1,3 @@
-# Copyright 2024 AllenAI. All rights reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ---------------------------------------------------------------------
-# Part of the code is adapted from https://github.com/OpenRLHF/OpenRLHF
-# which has the following license:
-# Copyright [yyyy] [name of copyright owner]
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# isort: off
 import os
 
 # We need to set NCCL_CUMEM_ENABLE=0 for performance reasons; see:
@@ -120,9 +90,9 @@ from open_instruct.utils import (
     maybe_update_beaker_description,
     maybe_use_ai2_hf_entity,
     maybe_use_ai2_wandb_entity,
-    setup_logger,
 )
-from open_instruct.vllm_utils3 import create_vllm_engines, init_process_group
+from open_instruct.logger_utils import setup_logger
+from open_instruct.vllm_utils import create_vllm_engines, init_process_group
 
 api = HfApi()
 INVALID_LOGPROB = 1.0
