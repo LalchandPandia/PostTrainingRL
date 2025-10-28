@@ -48,7 +48,6 @@ from dataclasses import dataclass
 from multiprocessing import resource_tracker as _rt
 from typing import Any, Iterable, List, NewType, Optional, Tuple, Union
 
-import beaker
 import numpy as np
 import ray
 import requests
